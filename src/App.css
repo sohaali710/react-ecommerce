@@ -1,38 +1,98 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.navbar {
+  background-color: steelblue !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.navbar .navbar-nav .nav-link {
+  display: inline-block;
+  padding: 16px 20px !important;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-right: 30px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+  color: #000;
+
+  transition: 1s all ease;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .nav-link.active {
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar .nav-link:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.navbar .cartIcon {
+  width: 44px;
+  height: 44px;
+
+  border: 2px rgba(0, 0, 0, .7) solid;
+  border-radius: 50%;
+
+  position: relative;
+}
+
+.navbar .cartIcon .fa-cart-shopping {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* product card */
+.card {
+  min-height: 70vh;
+
+  padding: 14px 14px 20px 14px;
+}
+
+.card .card-body {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.card .card-img-top {
+  max-height: 40vh;
+}
+
+.card .product-price {
+  font-size: 30px;
+}
+
+/* plus or minus btn quantity */
+.card .quantityBtns {
+  width: 60%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.card .quantityBtns .btn-dark {
+  display: inline-block;
+  width: 40px !important;
+
+  font-weight: bold;
+}
+
+.card .quantityBtns .quantity {
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 6px;
 }
