@@ -1,20 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useCart } from '../context/CartContext';
 
-const ProductItem = ({ product_name, category, details, image, price }) => {
-    const [quantity, setQuantity] = useState(0)
-
-    const handlePlusBtn = () => {
-        setQuantity(prevCounter => prevCounter + 1)
-    }
-    const handleMinusBtn = () => {
-        setQuantity(prevCounter => prevCounter - 1)
-    }
+const ProductItem = ({ id, product_name, category, details, image, price }) => {
+    const { getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeItem } = useCart()
 
     return (
         <>
-            <Card style={{ width: '20rem' }}>
+            <Card className='m-auto' style={{ width: '20rem' }} key={id}>
                 <Card.Img variant="top" src={`./images/${image}.jpg`}
                     className='rounded img-fluid' />
                 <Card.Body>
@@ -26,15 +20,17 @@ const ProductItem = ({ product_name, category, details, image, price }) => {
                     <h5 className='text-muted mt-3 mb-4 product-price'>$ {price}</h5>
 
                     {
-                        !quantity ?
-                            <Button variant="primary" onClick={() => setQuantity(1)}><i className="fa-solid fa-cart-shopping me-2"></i>Add to Cart</Button>
+                        !getItemQuantity(id) ?
+                            <Button variant="primary" onClick={e => increaseItemQuantity(id)}><i className="fa-solid fa-cart-shopping me-2"></i>Add to Cart</Button>
                             :
                             <div className="quantityBtns">
-                                <Button variant="dark" onClick={handleMinusBtn}>-</Button>
-                                <div className="quantity">{quantity} in Cart</div>
-                                <Button variant="dark" onClick={handlePlusBtn}>+</Button>
+                                {getItemQuantity(id) === 1 ?
+                                    <Button variant="danger" onClick={e => removeItem(id)}><i className="fa-solid fa-close"></i></Button>
+                                    :
+                                    <Button variant="dark" onClick={e => decreaseItemQuantity(id)}>-</Button>}
 
-                                {/* <Button variant="danger" onClick={handleRemove}>Remove from Cart</Button> */}
+                                <div className="quantity">{getItemQuantity(id)} in Cart</div>
+                                <Button variant="dark" onClick={e => increaseItemQuantity(id)}>+</Button>
                             </div>
                     }
 

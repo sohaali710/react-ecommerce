@@ -13,7 +13,6 @@ const Products = () => {
             })
             .catch(err => console.log(err))
     }, [])
-    // console.log(products)
 
     return (
         <>
