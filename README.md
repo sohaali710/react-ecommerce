@@ -4,4 +4,7 @@ https://react-shopping-cart777.netlify.app/
 
 ## To Runs the JSON server in the development mode
 In the project directory run:\
+
+```
 json-server --watch products.json --port 3001
+```
