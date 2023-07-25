@@ -7,7 +7,7 @@ const Products = () => {
     let [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/products')
+        axios.get('https://json-server-t4nd.onrender.com/products')
             .then(res => {
                 setProducts(res.data)
             })

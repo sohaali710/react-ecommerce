@@ -10,7 +10,7 @@ const Cart = () => {
     let [itemsDetails, setItemsDetails] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/products')
+        axios.get('https://json-server-t4nd.onrender.com/products')
             .then(res => {
                 setItemsDetails(res.data)
             })
