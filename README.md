@@ -1,5 +1,5 @@
-## To Run The Project
-You can open the project live using this link:
+## React Shopping Cart
+Run the project live using the following link:
 
 https://react-shopping-cart777.netlify.app/
 
