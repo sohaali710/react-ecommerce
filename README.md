@@ -1,5 +1,5 @@
 ## React Shopping Cart
-Run the project live using the following link:
+Run the app live:
 
 https://react-shopping-cart777.netlify.app/
 
