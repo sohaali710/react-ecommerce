@@ -20,7 +20,7 @@ https://github.com/sohaali710/json-server
 - Products list page with:
   - Add to cart
 - Cart page with:
-    - Change product quantity
+    - Increase or decrease the quantity of cart item
     - Remove product from cart
     - Cart data is saved into cookies
 - Page to show product details
