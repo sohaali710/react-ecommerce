@@ -1,4 +1,4 @@
-## React Shopping Cart
+# React Shopping Cart
 
 App live demo :
 
