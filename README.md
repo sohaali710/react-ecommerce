@@ -13,11 +13,16 @@ https://github.com/sohaali710/json-server
 - React router
 - Axios
 - Json server
+- Cookies
 
 
 ##### It contains :
 - Products list page with:
   - Add to cart
+- Cart page with:
+    - Change product quantity
+    - Remove product from cart
+    - Cart data is saved into cookies
 - Page to show product details
 
 
