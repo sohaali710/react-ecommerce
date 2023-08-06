@@ -1,13 +1,12 @@
 ## React Shopping Cart
-Run the app live:
+
+App live demo :
 
 https://react-shopping-cart777.netlify.app/
 
-Json server used in the app to get products data:
+Json server used in the app to get products data :
 
-```
 https://github.com/sohaali710/json-server
-```
 
 ##### Using :
 - React with hooks
