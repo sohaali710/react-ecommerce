@@ -9,11 +9,11 @@ Json server used in the app to get products data :
 https://github.com/sohaali710/json-server
 
 ##### Using :
-- React with hooks
 - React router
+- Use context
 - Axios
 - Json server
-- Cookies
+- Local storage
 
 
 ##### It contains :
@@ -22,7 +22,7 @@ https://github.com/sohaali710/json-server
 - Cart page with:
     - Increase or decrease the quantity of cart item
     - Remove product from cart
-    - Cart data is saved into cookies
+    - Cart data is saved into localStorage
 - Page to show product details
 
 
